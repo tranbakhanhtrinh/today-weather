@@ -20,7 +20,7 @@ const Input = ({
   onChange
 }: InputProps) => {
   return (
-    <div className='flex gap-3 mb-4'>
+    <div className='flex gap-3 mb-4 items-center'>
       <label
         htmlFor={id}
         className='w-[80px] md:w-auto font-semibold'
@@ -33,7 +33,7 @@ const Input = ({
         value={value}
         name={name}
         onChange={onChange}
-        className='focus-within:outline-none px-2'
+        className='focus-within:outline-none px-2 text-base p-1'
         {...otherProps}
       />
     </div>
