@@ -12,8 +12,10 @@ export default function Home() {
         <CityAndCountryContextProvider>
           <Header />
           <Search />
-          <WeatherCard />
-          <SearchHistory />
+          <div className='block lg:flex lg:gap-4 xl:container xl:mx-auto'>
+            <WeatherCard />
+            <SearchHistory />
+          </div>
         </CityAndCountryContextProvider>
       </ReactQueryProvider>
     </main>

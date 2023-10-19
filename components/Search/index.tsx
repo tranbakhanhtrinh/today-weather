@@ -24,8 +24,8 @@ const Search = () => {
       searchArr.push({
         id: new Date().getTime().toString(),
         date: time,
-        city: city,
-        country: country
+        city: city.trim(),
+        country: country.trim()
       })
       setItem('searchHistory', searchArr)
     } else {
@@ -33,8 +33,8 @@ const Search = () => {
       arr.push({
         id: new Date().getTime().toString(),
         date: time,
-        city: city,
-        country: country
+        city: city.trim(),
+        country: country.trim()
       })
       setItem('searchHistory', arr)
     }

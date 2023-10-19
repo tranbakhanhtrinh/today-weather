@@ -16,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`h-[100vh] ${inter.className}`}>{children}</body>
+      <body
+        className={`overflow-auto md:overflow-hidden lg:h-[100vh] sm:h-auto ${inter.className}`}
+      >
+        {children}
+      </body>
     </html>
   )
 }

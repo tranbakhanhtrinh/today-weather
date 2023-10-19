@@ -11,7 +11,7 @@ const WeatherCard = () => {
   )
   if (isError) {
     return (
-      <section className='mb-4 h-auto md:h-[400px] block md:flex justify-center items-center'>
+      <section className='mb-4 lg:mb-0 h-[23rem] lg:h-auto w-full lg:w-1/2 sm:w-[600px] block md:flex justify-center items-center rounded-[25px] bg-white'>
         <h1 className='border-red-600 border-solid border-[1px] font-bold bg-red-200 p-1 mb-4 px-8'>
           {error instanceof Error && error.message}
         </h1>
@@ -20,17 +20,17 @@ const WeatherCard = () => {
   }
   if (isLoading || isFetching) {
     return (
-      <section className='mb-4 h-auto md:h-[400px] relative'>
+      <section className='mb-4 lg:mb-0 h-[23rem] lg:h-auto w-full lg:w-1/2 sm:w-[600px] mx-auto relative rounded-[25px] bg-white '>
         <Loading />
       </section>
     )
   }
   return (
-    <section className='mb-4 h-auto md:h-[400px]'>
-      <div className='text-black'>
-        <div className='block w-full md:w-[612px] rounded-[25px] mx-auto my-0 py-[2rem] bg-white'>
-          <div className='pb-[2rem] flex justify-center flex-col items-center'>
-            <h1 className='text-[40px] font-bold mb-4'>
+    <section className='mb-4 lg:mb-0 h-[23rem] lg:h-auto lg:w-1/2 sm:w-[600px] mx-auto'>
+      <div className='text-black h-full'>
+        <div className='block w-full rounded-[25px]  my-0 p-4 bg-white h-full'>
+          <div className='pb-4 sm:pb-8 flex justify-center flex-col items-center'>
+            <h1 className='text-2xl font-bold mb-4'>
               {data?.name}, {data?.sys.country}
             </h1>
             <Image
@@ -40,16 +40,16 @@ const WeatherCard = () => {
               alt='weather icon'
             />
           </div>
-          <div className='block sm:flex gap-4 justify-center items-center px-4 sm:px-auto'>
-            <div className='w-full sm:w-[50%] m-0 mb-4 sm:mb-0 flex justify-center items-center'>
-              <h1 className='text-[40px]'>
+          <div className='block sm:flex gap-4 justify-center items-center sm:px-auto'>
+            <div className='w-full sm:w-[30%] xl:w-[40%] m-0 mb-4 sm:mb-0 flex justify-center items-center'>
+              <h1 className='text-2xl sm:text-[40px]'>
                 {data?.main.temp.toFixed(0)}
                 <sup>&deg;</sup>
                 <span>C</span>
               </h1>
             </div>
 
-            <div className='w-full sm:w-[50%] flex items-center gap-8'>
+            <div className='w-full sm:w-[70%] xl:w-[60%] flex items-center gap-8'>
               <div>
                 <p className='font-bold'>Description</p>
                 <p className='font-bold'>Temperature</p>

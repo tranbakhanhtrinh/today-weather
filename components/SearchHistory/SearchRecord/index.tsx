@@ -21,13 +21,6 @@ const SearchRecord = () => {
     if (historyArr) setList(historyArr)
   }, [cityAndCountry.city, cityAndCountry.country])
 
-  if (list.length === 0) {
-    return (
-      <h1 className='text-center font-bold text-slate-500 text-[2rem]'>
-        No Record
-      </h1>
-    )
-  }
   const handleDelete = (id: string) => {
     const filteredList = list.filter((ele: { id: string }) => ele.id !== id)
     setList(filteredList)
@@ -36,6 +29,14 @@ const SearchRecord = () => {
 
   const handleClickHistory = (city: string, country: string) => () => {
     setCityAndCountry({ city, country })
+  }
+
+  if (list.length === 0) {
+    return (
+      <h1 className='text-center font-bold text-slate-500 text-[2rem]'>
+        No Record
+      </h1>
+    )
   }
 
   const historyList = list.map(
