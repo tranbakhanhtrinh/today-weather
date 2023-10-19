@@ -11,7 +11,7 @@ const WeatherCard = () => {
   )
   if (isError) {
     return (
-      <section className='mb-4 lg:mb-0 h-[23rem] lg:h-auto w-full lg:w-1/2 sm:w-[600px] block md:flex justify-center items-center rounded-[25px] bg-white'>
+      <section className='mb-4 lg:mb-0 h-[23rem] lg:h-auto w-full lg:w-1/2 sm:w-[600px] block md:flex justify-center items-center rounded bg-white'>
         <h1 className='border-red-600 border-solid border-[1px] font-bold bg-red-200 p-1 mb-4 px-8'>
           {error instanceof Error && error.message}
         </h1>
@@ -20,7 +20,7 @@ const WeatherCard = () => {
   }
   if (isLoading || isFetching) {
     return (
-      <section className='mb-4 lg:mb-0 h-[23rem] lg:h-auto w-full lg:w-1/2 sm:w-[600px] mx-auto relative rounded-[25px] bg-white '>
+      <section className='mb-4 lg:mb-0 h-[23rem] lg:h-auto w-full lg:w-1/2 sm:w-[600px] mx-auto relative rounded bg-white '>
         <Loading />
       </section>
     )
@@ -28,7 +28,7 @@ const WeatherCard = () => {
   return (
     <section className='mb-4 lg:mb-0 h-[23rem] lg:h-auto lg:w-1/2 sm:w-[600px] mx-auto'>
       <div className='text-black h-full'>
-        <div className='block w-full rounded-[25px]  my-0 p-4 bg-white h-full'>
+        <div className='block w-full rounded my-0 p-4 bg-white h-full'>
           <div className='pb-4 sm:pb-8 flex justify-center flex-col items-center'>
             <h1 className='text-2xl font-bold mb-4'>
               {data?.name}, {data?.sys.country}
